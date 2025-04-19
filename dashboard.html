@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web3 ESG Dashboard</title>
+    <link rel="stylesheet" href="css/dashboardStyles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script defer src="js/dashboardScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#ranking">Ranking</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="content">
+      <h1>Web 3 ranking Page</h1>
+
+      <div class="top-section">
+        <div class="card">
+          <h3>Number of Web3 Pages</h3>
+          <p id="web3-pages">Loading...</p>
+          <div class="logo-circle">
+            <span class="blockchain-font">B</span>
+          </div>
+        </div>
+        <div class="animated-container">
+          <div class="animated-text">
+            You will find here the ranking of L1 blockchains
+          </div>
+          <div class="animated-text">
+            Check Our chatbot for suggestions in investment
+          </div>
+          <div class="chatbot-button">Chat with Our Bot</div>
+        </div>
+
+        <div class="card">
+          <h3>Latest Update</h3>
+
+          <p id="latest-update">Loading...</p>
+          <div class="logo-circle">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="middle-section">
+        <div class="card">
+          <h3>Highest ESG Scores</h3>
+          <canvas id="highest-esg-chart"></canvas>
+        </div>
+        <div class="card">
+          <h3>High Ranking ESG Scores</h3>
+        </div>
+        <div class="card">
+          <h3>Low Ranking ESG Scores</h3>
+        </div>
+      </div>
+
+      <div class="table-section">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Rank</th>
+              <th>Check Website</th>
+              <th>See Details</th>
+            </tr>
+          </thead>
+          <tbody id="web3-table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer>
+      <p>Team | Contact | Address</p>
+    </footer>
+
+    <div class="chat-button" onclick="toggleChat()">
+      <div class="chat-typing">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </body>
+</html>

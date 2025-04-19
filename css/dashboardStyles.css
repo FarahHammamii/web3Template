@@ -1,0 +1,375 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.85);  /* Lighter text color */
+    background: linear-gradient(135deg, rgba(55, 0, 75, 1), rgba(0, 0, 0, 0.85));  /* Black to purple gradient */
+    overflow-x: hidden;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right:18px;
+    width: 100%;
+    background: rgba(50, 0, 50, 0.9);  /* Dark purple background */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5b5b;  /* Light pink on hover */
+}
+
+div.dashboard {
+    width: 80%;
+    background: #25253c;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.top-section, .middle-section, .ranking-section, .table-section, .suggestion-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, rgba(55, 0, 75, 1), rgba(0, 0, 0, 0.85));
+    }
+    50% {
+        background: linear-gradient(135deg, rgba(0, 100, 255, 1), rgba(0, 255, 255, 0.85));
+    }
+    100% {
+        background: linear-gradient(135deg, rgba(55, 0, 75, 1), rgba(0, 0, 0, 0.85));
+    }
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Add the glowing effect to the cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    animation: glow 1s infinite;
+}
+
+/* Optional: If you want to animate the glowing effect for cards */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px 2px #3b82f6;
+    }
+    50% {
+        box-shadow: 0 0 15px 6px rgba(59, 130, 246, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px 2px #3b82f6;
+    }
+}
+
+.card-header {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-out; /* Adding fadeIn animation */
+}
+
+table, th, td {
+    border: none; /* Remove default border */
+    text-align: center;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);  /* Dark transparent background for rows */
+   /* Rounded corners */
+}
+
+/* Styling headers */
+th {
+    background: #00d4ff;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+   
+}
+
+/* Adding hover effect for rows */
+tr:hover {
+    background: rgba(59, 130, 246, 0.2);
+    transform: translateY(-5px); /* Slightly lift the row */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Adding animation for each row */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.suggestion-section {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border: 2px solid #e0e0e0;
+    font-size: 36px;
+    font-weight: bold;
+    color: #3b82f6; /* A modern blue color */
+    font-family: 'Arial', sans-serif;
+    transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Add the glowing effect to the logo-circle */
+.logo-circle:hover {
+    box-shadow: 0 0 10px 3px #3b82f6, 0 0 15px 5px rgba(59, 130, 246, 0.6);
+    transform: scale(1.1); /* Slightly enlarge on hover for effect */
+}
+
+.blockchain-font {
+    color: #3b82f6; /* Modern blue for the letter */
+}
+#latest-update {
+    font-size: 22px;
+    font-weight: bold; /* Bold font to emphasize the latest update */
+    color: #f3f4f6; /* Lighter color for the content */
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out; /* Smooth color change on hover */
+}
+
+/* Add hover effect on text */
+#latest-update:hover {
+    color: #ff5b5b; /* Light pink color when hovered */
+}
+
+/* Make the "Latest Update" card stand out like the blockchain number */
+.card.latest-update {
+    background: rgba(55, 0, 75, 0.9);  /* Dark purple background to match the gradient */
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+h3 {
+    color: #fff;
+}
+h3 {
+    color: #fff;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(50, 0, 50, 0.9);  /* Dark purple background */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6a1b9a;
+    color: white;
+    padding: 12px 20px;
+    height:30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px 20px 20px 5px; /* Message bubble shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.chat-button:hover {
+    background-color: #8e24aa;
+    transform: scale(1.05);
+}
+
+/* Typing Animation */
+.chat-typing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.chat-typing span {
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    animation: typing 1.5s infinite ease-in-out;
+}
+
+.chat-typing span:nth-child(1) { animation-delay: 0s; }
+.chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+.chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+    0% { opacity: 0.3; transform: translateY(0px); }
+    50% { opacity: 1; transform: translateY(-3px); }
+    100% { opacity: 0.3; transform: translateY(0px); }
+}
+.animated-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 2px solid rgba(255, 255, 255, 0.75); /* Smaller cursor */
+    margin: 10px 0; /* Space between the two texts */
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite, repeatTyping 8s infinite; /* Repeating animation */
+  }
+  @keyframes repeatTyping {
+    0% {
+      width: 0;
+    }
+    25% {
+      width: 100%;
+    }
+    50% {
+      width: 0;
+    }
+    75% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }  
+  @keyframes typing2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: rgba(255, 255, 255, 0.75);
+    }
+    100% {
+      border-color: transparent;
+    }
+  }
+  .chatbot-button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: #ff6f61; /* Vibrant button color */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 111, 97, 0.4);
+  }
+  
+  .chatbot-button:hover {
+    background-color: #e85c4f; /* Slightly darker shade on hover */
+    transform: translateY(-5px); /* Subtle hover lift effect */
+    box-shadow: 0 6px 15px rgba(255, 111, 97, 0.6); /* Enhanced shadow on hover */
+  }
+  
+  .chatbot-button:focus {
+    outline: none;
+  }
+  
+  .chatbot-button:active {
+    background-color: #d9534f; /* Darker color when button is clicked */
+    transform: translateY(2px); /* Button "pressed" effect */
+  }

@@ -1,0 +1,297 @@
+/* Use a modern font like Poppins from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.85);  /* Lighter text color */
+    background: linear-gradient(135deg, rgba(55, 0, 75, 1), rgba(0, 0, 0, 0.85));  /* Black to purple gradient */
+    overflow-x: hidden;
+}
+
+#bg {
+    position: fixed;  /* Ensures it stays as the background */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;  /* Keeps it behind other elements */
+    opacity: 1;  /* Slight opacity for better visibility of content */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right:18px;
+    width: 100%;
+    background: rgba(50, 0, 50, 0.9);  /* Dark purple background */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5b5b;  /* Light pink on hover */
+}
+
+canvas {
+    transform: translateY(-20px);
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.content {
+    text-align: left;
+    margin-top: 120px;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.user-type button {
+    margin: 15px;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #6a1b9a, #ab47bc);  /* Purple gradient */
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 30px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.user-type button:hover {
+    background: linear-gradient(135deg, #8e24aa, #ba68c8);  /* Slightly lighter purple gradient */
+    transform: translateY(-5px);  /* Subtle hover lift effect */
+}
+
+.scroll-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    flex-wrap: wrap;          /* Ensures responsiveness */
+    gap: 20px;                /* Space between cards */
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    overflow-x: auto; /* Horizontal scroll when content overflows */
+    padding: 20px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+
+}
+.scroll-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.scroll-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.card-header {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.card-header h3 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ranking {
+    font-size: 14px;
+    color: #ff9800;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.website-icon {
+    font-size: 20px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.website-icon:hover {
+    color: #ff9800;
+}
+
+.check-details-btn {
+    padding: 10px 20px;
+    background: #6a1b9a;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.check-details-btn:hover {
+    background: #8e24aa;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(50, 0, 50, 0.9);  /* Dark purple background */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6a1b9a;
+    color: white;
+    padding: 12px 20px;
+    height:30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px 20px 20px 5px; /* Message bubble shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.chat-button:hover {
+    background-color: #8e24aa;
+    transform: scale(1.05);
+}
+
+/* Typing Animation */
+.chat-typing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.chat-typing span {
+    width: 7px;
+    height: 7px;
+    background: white;
+    border-radius: 50%;
+    animation: typing 1.5s infinite ease-in-out;
+}
+
+.chat-typing span:nth-child(1) { animation-delay: 0s; }
+.chat-typing span:nth-child(2) { animation-delay: 0.2s; }
+.chat-typing span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+    0% { opacity: 0.3; transform: translateY(0px); }
+    50% { opacity: 1; transform: translateY(-3px); }
+    100% { opacity: 0.3; transform: translateY(0px); }
+}
+.chatbot-button {
+    height:40px;
+    width:120px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: #ff6f61; /* Vibrant button color */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(255, 111, 97, 0.4);
+  }
+  
+  .chatbot-button:hover {
+    background-color: #e85c4f; /* Slightly darker shade on hover */
+    transform: translateY(-5px); /* Subtle hover lift effect */
+    box-shadow: 0 6px 15px rgba(255, 111, 97, 0.6); /* Enhanced shadow on hover */
+  }
+  
+  .chatbot-button:focus {
+    outline: none;
+  }
+  
+  .chatbot-button:active {
+    background-color: #d9534f; /* Darker color when button is clicked */
+    transform: translateY(2px); /* Button "pressed" effect */
+  }

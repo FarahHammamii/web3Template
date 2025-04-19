@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, rgba(55, 0, 75, 1), rgba(0, 0, 0, 0.85));
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(50, 0, 50, 0.9);
+  padding: 20px 0;
+  text-align: center;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff5b5b;
+}
+
+.about {
+  margin-top: 100px;
+  padding: 50px;
+}
+
+.intro h1 {
+  font-size: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.intro p {
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  animation: glow 1s infinite;
+}
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 5px 2px #3b82f6;
+  }
+  50% {
+      box-shadow: 0 0 15px 6px rgba(59, 130, 246, 0.8);
+  }
+  100% {
+      box-shadow: 0 0 5px 2px #3b82f6;
+  }
+}
+
+.card i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #ff5b5b;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(50, 0, 50, 0.9);  /* Dark purple background */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

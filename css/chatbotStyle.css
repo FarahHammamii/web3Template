@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, rgba(55, 0, 75, 1), rgba(0, 0, 0, 0.85));
+  overflow-x: hidden;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(50, 0, 50, 0.9);
+  padding: 20px 0;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff5b5b;
+}
+
+.chatbot-container {
+  width: 80%;
+  height: 500px;
+  top: 20%;
+  position: fixed;
+  bottom: 0;
+  left: 20px;
+  background-color: #25253c;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-container.active {
+  display: flex;
+}
+
+.chat-header {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-chat-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  
+}
+
+.message {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.bot-icon, .user-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 15px;
+  background-color: #25253c;
+  border-radius: 0 0 10px 10px;
+}
+
+.chat-input input {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #444;
+  color: white;
+}
+
+.typing-animation {
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  animation: typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(50, 0, 50, 0.9);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes slideIn {
+  0% {
+    bottom: -400px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
