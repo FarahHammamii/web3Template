@@ -29,3 +29,6 @@ HTML5
 CSS3 (with custom styling for a futuristic Web3 look)
 
 JavaScript (Vanilla) – Dynamic content loading and interaction
+
+[![View Demo](https://img.shields.io/badge/View-Demo-blue?style=for-the-badge)](https://farahhammamii.github.io/web3Template/)
+
