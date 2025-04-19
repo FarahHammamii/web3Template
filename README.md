@@ -29,4 +29,6 @@ HTML5
 CSS3 (with custom styling for a futuristic Web3 look)
 
 JavaScript (Vanilla) – Dynamic content loading and interaction
+![image](https://github.com/user-attachments/assets/7e8683bc-eb56-4255-a834-c4b2df98edb6)
+
 ![image](https://github.com/user-attachments/assets/7551c929-639b-4fd1-b1b9-5c477a46a7c7)
